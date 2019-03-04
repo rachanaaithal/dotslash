@@ -25,11 +25,10 @@ def get_requests():
 			val = v
 			response[key] = val
 
-		if response:
-			return jsonify(response), 201
-		else:
-			return jsonify({}), 401
-
+		print(response)
+		response=[{'id':key, 'url':response[key]['url'], 'question': response[key]['question']} for key in response]
+		print(response)
+		return jsonify(response), 201
 	else:
 		return jsonify({}), 405
 

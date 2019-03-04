@@ -7,7 +7,7 @@ def put_request_data(tag,data):
 
 	if tag and data:
 		db.child(tag).push(data)
-	
+
 
 def get_request_data(tag):
 
@@ -32,15 +32,15 @@ def update_data(id_tag,tag,data):
 		return None
 
 
-tag = "queries"
+#tag = "queries"
 
-id_tag = "-L_6L3Op4SXqvdt2TCAl"
+#id_tag = "-L_6L3Op4SXqvdt2TCAl"
 
-data = "This is nice"
+#data = "This is nice"
 
 #json_dict = json.dumps(data)
 
-update_data(id_tag,tag,data)
+#update_data(id_tag,tag,data)
 
 
 '''
