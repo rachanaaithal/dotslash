@@ -10,7 +10,7 @@ window.onload=function(){
         cache: false,
         success: function(data){
             console.log(data);
-            $(#main-body).html('');
+            $("#main-body").html('');
             data.map(function(d){
                 console.log(d.question);
                 disp(d);
