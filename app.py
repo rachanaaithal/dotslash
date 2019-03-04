@@ -22,7 +22,9 @@ def get_requests():
 			key = k
 			val = v
 			response[key] = val
-
+		print(response)
+		response=[{'id':key, 'url':response[key]['url'], 'question': response[key]['question']} for key in response]
+		print(response)
 		return jsonify(response), 201
 
 	else:
