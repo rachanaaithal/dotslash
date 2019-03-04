@@ -1,4 +1,4 @@
-from flask import Flask, jsonify,request
+from flask import Flask, jsonify, request, render_template
 from firebase_db import db, get_request_data
 from firebase_storage import storage
 import json
@@ -7,7 +7,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-	return "Hello World"
+	
+	return render_template("base_generic.html")
+
 
 @app.route("/requests",methods = ['GET'])
 def get_requests():
